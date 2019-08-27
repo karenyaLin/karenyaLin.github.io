@@ -2,10 +2,10 @@ var myImage = document.querySelector('img');
 
 myImage.onclick = function() {
     var mySrc = myImage.getAttribute('src');
-    if ( mySrc === 'images/20190418-2.jpg') {
-      myImage.setAttribute ('src', 'images/pexels-photo-556665.jpeg' );
+    if(mySrc === 'images/pexels-photo-1298533.jpeg') {
+      myImage.setAttribute ('src','images/pexels-photo-2441454.jpeg');
     } else {
-      myImage.setAttribute ('src', 'images/20190418-2.jpg' );
+      myImage.setAttribute ('src','images/pexels-photo-1298533.jpeg');
     }
 }
 
@@ -15,14 +15,14 @@ var myHeading = document.querySelector('h1');
 function setUserName() {
   var myName = prompt('Please enter your name.');
   localStorage.setItem('name', myName);
-  myHeading.innerHTML = 'Welcome, ' + myName;
+  myHeading.innerHTML = 'Good vibe, ' + myName;
 }
 
 if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   var storedName = localStorage.getItem('name');
-  myHeading.innerHTML = 'Welcome, ' + storedName;
+  myHeading.innerHTML = 'Good vibe, ' + storedName;
 }
 
 myButton.onclick = function() {
